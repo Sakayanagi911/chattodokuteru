@@ -1,3 +1,4 @@
+<title>{{ config('chatify.name') }} - Reset Password</title>
 <x-guest-layout>
     <form method="POST" action="{{ route('password.store') }}">
         @csrf
