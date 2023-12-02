@@ -6,7 +6,7 @@ return [
     | Messenger display name
     |-------------------------------------
     */
-    'name' => env('CHATIFY_NAME', 'Chat Dokter'),
+    'name' => env('CHATIFY_NAME', 'Dokuteru.id'),
 
     /*
     |-------------------------------------
