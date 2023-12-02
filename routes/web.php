@@ -29,6 +29,8 @@ Route::get('/dashboard', function () {
 
 Route::get('/chatform', [ChatformController::class, 'showChatform'])->middleware('auth')->name('dashboard.chatform');
 Route::post('/save-form-data', [ChatformController::class, 'saveFormData'])->name('save.form.data');
+Route::get('/chatify/{userId}', [ChatController::class, 'showChat'])->name('chatify.show');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
