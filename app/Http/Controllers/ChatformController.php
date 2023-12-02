@@ -28,6 +28,11 @@ class ChatformController extends Controller
         CFDatabase::create($request->all());
 
         // Redirect atau lakukan apa pun sesuai kebutuhan
-        return redirect()->route('chat.show', ['id' => 1]);
+        return redirect()->route('chatify.show', ['userId' => 1]);
+    }
+    public function showChat($userId)
+    {
+        // Logika untuk menampilkan chat dengan user tertentu
+        return view('chat.show', ['userId' => $userId]);
     }
 }
