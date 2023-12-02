@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>{{ config('chatify.name') }} - Welcome</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -485,8 +485,10 @@
     </section>
 
     <div class="chat-button">
-        <button onclick="openChat">
-            <img src="{{ asset('icon/Chat.png') }}" alt="Chat Icon"> CHAT DOKTER!
+        <button>
+            <a href="{{ url('/chatform') }}" style="text-decoration: none;">
+                <img src="{{ asset('icon/Chat.png') }}" alt="Chat Icon" style="vertical-align: middle"> CHAT DOKTER!
+            </a>
         </button>
     </div>
 
