@@ -183,14 +183,15 @@
     <section class="container2">
         <div class="form-container">
             <h2>Formulir Chat</h2>
-            <form>
+            <form method="post" action="{{ route('save.form.data') }}">
+                @csrf
                 <div class="form-group">
                     <label for="firstName">Nama Depan</label>
-                    <input type="text" id="firstName" name="firstName" required>
+                    <input type="text" id="firstName" name="first_name" required>
                 </div>
                 <div class="form-group">
                     <label for="lastName">Nama Belakang</label>
-                    <input type="text" id="lastName" name="lastName" required>
+                    <input type="text" id="lastName" name="last_name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
@@ -199,7 +200,7 @@
                 <div class="form-group">
                     <label for="phone">Nomor Telepon</label>
                     <div class="flex">
-                        <select id="countryCode" name="countryCode" required>
+                        <select id="countryCode" name="country_code" required>
                             <option value="+62">+62</option>
                             <!-- Tambahkan pilihan negara lainnya jika diperlukan -->
                         </select>
